@@ -1,3 +1,2 @@
 # geek_shop
-Repository for frontend
-Репозиторий для Frontend
+Файлы для отображения внешнего вида 
