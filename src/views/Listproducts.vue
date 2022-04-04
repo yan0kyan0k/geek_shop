@@ -19,7 +19,9 @@ export default {
   computed: {
     catalog() {
       //, this.$route.params.id
-      this.$store.dispatch('loadProdutsByCategory', this.$route.params.id);
+      if(this.$store.state.catalog != undefined && this.$store.state.catalog[0].category_id != this.$route.params.id){
+        this.$store.dispatch('loadProdutsByCategory', this.$route.params.id);
+      }
       return this.$store.getters.getCatalog
     }
   },
